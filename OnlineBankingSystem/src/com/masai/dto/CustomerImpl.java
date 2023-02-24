@@ -73,7 +73,7 @@ public class CustomerImpl implements Customer  {
 		this.date = date;
 	}
 	
-	public CustomerImpl(int id, int branchID, String firstName, String lastName, String gender, String address, String phone, String email, String date) {
+	public CustomerImpl() {
 		super();
 		this.id = id;
 		this.branchId = branchId;

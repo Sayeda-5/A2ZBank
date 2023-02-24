@@ -56,10 +56,10 @@ public class Main {
 					CustomerUI.addCustomer();
 					break;
 				case 2:
-					
+					CustomerUI.getCustomerList();
 					break;
 				case 3:
-
+					CustomerUI.updateCustomer();
 					break;
 				case 4:
 					

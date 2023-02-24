@@ -30,7 +30,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 			
 			//stuff the data in the query
 			ps.setInt(1, customer.getId());
-			ps.setString(2, customer.getBranchID());
+			ps.setInt(2, customer.getBranchID());
 			ps.setString(3, customer.getFirstName());
 			ps.setString(4, customer.getLastName());
 			ps.setString(5, customer.getAddress());
@@ -115,7 +115,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 			PreparedStatement ps = connection.prepareStatement(UPDATE_QUERY);
 			
 			//stuff the data in the query
-			ps.setString(1, customer.getBranchID());
+			ps.setInt(1, customer.getBranchID());
 //			ps.setString(2, customer.getPassword());
 			ps.setString(3, customer.getFirstName());
 			ps.setString(4, customer.getLastName());

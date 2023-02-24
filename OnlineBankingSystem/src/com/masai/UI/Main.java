@@ -2,12 +2,13 @@ package com.masai.UI;
 
 import java.util.Scanner;
 
+import com.masai.dao.CustomerDAOImpl;
+import com.masai.dto.Customer;
 import com.masai.exception.SomeThingWrongException;
 
 public class Main {
 	public static void main(String[] args) throws Exception {
 		Scanner sc = new Scanner(System.in);
-//		CustomerUI = new CustomerUI(sc);
 		int choice = 0;
 		do {
 			System.out.println("1. Admin Login\n2. Customer Login\n0. Exit");
@@ -58,8 +59,18 @@ public class Main {
 					
 					break;
 				case 3:
+
+					break;
+				case 4:
 					
 					break;
+				case 5:
+					
+					break;
+                case 6:
+					
+					break;
+				
 			}
 		}while(choice != 0);
 	}

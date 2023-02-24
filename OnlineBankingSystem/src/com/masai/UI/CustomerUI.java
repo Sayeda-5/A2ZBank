@@ -30,18 +30,24 @@ public class CustomerUI {
 		String gender= scanner.next();
 		System.out.print("Enter Custumer Address");
 		String address= scanner.next();
+		System.out.print("Enter Custumer phone");
+		String phone = scanner.next();
 		System.out.print("Enter Custumer email");
 		String email= scanner.next();
 		System.out.print("Enter Custumer date");
 		String date= scanner.next();
-		System.out.print("Enter Custumer phone");
-		String phone = scanner.next();
 		
-		Customer customer = new CustomerImpl(id, branchID, firstName, lastName, gender , address, email, date, phone);
+		
+		Customer customer = new CustomerImpl(id, branchID,firstName,lastName,gender,address,phone,email,date);
 		
 		System.out.print("Enter customer name ");
-		customerDAO.addCustomer(customer);
-		System.out.println("Category added successfully");
+		try {
+			customerDAO.addCustomer(customer);
+			System.out.println("Customr Added Successfully");
+		} catch (SomeThingWrongException e) {
+			
+			System.out.println(e);
+		}
 		
 	}
 }

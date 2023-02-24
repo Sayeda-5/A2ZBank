@@ -32,8 +32,9 @@ public class DBUtils {
 		if(conn!=null)
 			conn.close();
 	}
-	public static Connection connecteToDatabase() {
+	public static Connection connectToDatabase() {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
 }

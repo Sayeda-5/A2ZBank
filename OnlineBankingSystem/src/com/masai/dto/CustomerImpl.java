@@ -73,26 +73,49 @@ public class CustomerImpl implements Customer  {
 		this.date = date;
 	}
 	
-	public CustomerImpl(int id, int branchId, String password, String firstName, String lastName, String gender,
-			String address, String phone, String email) {
+	public CustomerImpl(int id, int branchID, String firstName, String lastName, String gender, String address, String phone, String email, String date) {
 		super();
 		this.id = id;
 		this.branchId = branchId;
 		this.password = password;
-		FirstName = firstName;
-		LastName = lastName;
+		FirstName = FirstName;
+		LastName = LastName;
 		this.gender = gender;
-		Address = address;
+		Address = Address;
 		this.phone = phone;
 		this.email = email;
 		this.date = date;
 	}
+	
 	
 	@Override
 	public String toString() {
 		return "Customer [id=" + id + ", branchId=" + branchId + ", password=" + password + ", FirstName=" + FirstName
 				+ ", LastName=" + LastName + ", gender=" + gender + ", Address=" + Address + ", phone=" + phone
 				+ ", email=" + email + ", date=" + date + "]";
+	}
+	
+	
+	@Override
+	public String getemail() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public void setID(int int1) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	@Override
+	public void setBranchID(int int1) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public int getBranchID() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 	

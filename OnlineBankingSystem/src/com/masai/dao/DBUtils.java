@@ -2,6 +2,7 @@ package com.masai.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
@@ -36,5 +37,12 @@ public class DBUtils {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+	public static boolean isResultSetEmpty(ResultSet resultSet) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+	
 	
 }

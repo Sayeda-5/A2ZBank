@@ -4,29 +4,14 @@ import java.util.Scanner;
 
 import com.masai.dao.CustomerDAOImpl;
 import com.masai.dto.Customer;
+import com.masai.exception.NoRecordFoundException;
 import com.masai.exception.SomeThingWrongException;
 
 public class Main {
-	public static void main(String[] args) throws Exception {
-		Scanner sc = new Scanner(System.in);
-		int choice = 0;
-		do {
-			System.out.println("1. Admin Login\n2. Customer Login\n0. Exit");
-			choice = sc.nextInt();
-			switch(choice) {
-				case 1:
-					adminLogin1(sc);
-					break;
-				case 2:
-					customerLogin(sc);
-			}
-		}while(choice != 0);
-		
-		
-		sc.close();
-	}
+	private static CustomerUI customerUI;
+//	private static AccountUI accountUI;
 
-	static void adminLogin1(Scanner sc) throws SomeThingWrongException {
+	static void adminLogin1(Scanner sc) throws SomeThingWrongException, NoRecordFoundException {
 		System.out.print("Enter username ");
 		String username = sc.next();
 		System.out.print("Enter password ");
@@ -39,7 +24,7 @@ public class Main {
 		}
 	}
 
-	static void printAdminMenu(Scanner sc) throws SomeThingWrongException {
+	static void printAdminMenu(Scanner sc) throws SomeThingWrongException, NoRecordFoundException {
 		int choice = 0;
 		do {
 			System.out.println("1. Add new Customer");
@@ -53,19 +38,19 @@ public class Main {
 			choice = sc.nextInt();
 			switch(choice) {
 				case 1:
-					CustomerUI.addCustomer();
+					customerUI.addCustomer();
 					break;
 				case 2:
-					CustomerUI.getCustomerList();
+					customerUI.getCustomerList();
 					break;
 				case 3:
-					CustomerUI.updateCustomer();
+					customerUI.updateCustomer();
 					break;
 				case 4:
-					
+					customerUI.deleteCustomer();
 					break;
 				case 5:
-					
+					customerUI.findByEmailId();
 					break;
                 case 6:
 					
@@ -83,5 +68,26 @@ public class Main {
 		
 		//call DAO method to check if username and password is correct, from this method get object of User id
 		//LoggedINUser.loggedInUserId = userId; this will make user id available to you everywhere
+	}
+	
+	public static void main(String[] args) throws Exception {
+		Scanner sc = new Scanner(System.in);
+		customerUI = new CustomerUI(sc);
+		int choice = 0;
+		do {
+			System.out.println("1. Admin Login\n2. Customer Login\n0. Exit");
+			choice = sc.nextInt();
+			switch(choice) {
+				case 1:
+					adminLogin1(sc);
+					break;
+				case 2:
+					customerLogin(sc);
+					break;
+				default:
+					System.out.println("Invalid Selection, try again");
+			}
+		}while(choice != 0);
+		sc.close();
 	}
 }

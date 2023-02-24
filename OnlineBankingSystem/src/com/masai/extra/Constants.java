@@ -65,22 +65,6 @@ public class Constants {
 	    }
 	}
 
-	public enum CheckbookStatus {
-		NOT_APPLIED("Not Applied"),
-		AAPLIED("Applied"),
-		APPROVAL_PENDING("Approval Pending"),
-		APPROVED("Approved");
-		
-		private String status;
-
-	    private CheckbookStatus(String status) {
-	      this.status = status;
-	    }
-
-	    public String value() {
-	      return this.status;
-	    }
-	}
 	
 	
 }

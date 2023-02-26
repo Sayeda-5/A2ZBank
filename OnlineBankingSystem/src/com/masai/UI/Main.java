@@ -11,7 +11,7 @@ public class Main {
 	private static CustomerUI customerUI;
 //	private static AccountUI accountUI;
 
-	static void adminLogin1(Scanner sc) throws SomeThingWrongException, NoRecordFoundException {
+	static void adminLogin(Scanner sc) throws SomeThingWrongException, NoRecordFoundException {
 		System.out.print("Enter username ");
 		String username = sc.next();
 		System.out.print("Enter password ");
@@ -79,7 +79,7 @@ public class Main {
 			choice = sc.nextInt();
 			switch(choice) {
 				case 1:
-					adminLogin1(sc);
+					adminLogin(sc);
 					break;
 				case 2:
 					customerLogin(sc);

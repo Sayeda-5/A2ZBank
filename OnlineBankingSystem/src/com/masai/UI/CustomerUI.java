@@ -1,6 +1,7 @@
 package com.masai.UI;
 
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
 
@@ -178,6 +179,79 @@ public class CustomerUI {
 	
 	public void logout() {
 		customerDAO.logout();
+		
+	}
+
+	public void viewAccout() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void updateNameOfUser() {
+		// TODO Auto-generated method stub
+		System.out.print("Enter name ");
+		String name = scanner.next();
+		
+		try {
+			customerDAO.updateNameOfUser(name);
+			System.out.println("Name updated successfully");
+		}catch(SomeThingWrongException ex) {
+			System.out.println(ex);
+		}
+		
+	}
+
+	public void deleteUser() {
+		// TODO Auto-generated method stub
+		try {
+			customerDAO.deleteUser();
+			System.out.println("You are Logged out.\nDeleted your account");
+		}catch(SomeThingWrongException ex) {
+			System.out.println(ex);
+		}
+		
+	}
+
+	public void createaccout() {
+		// TODO Auto-generated method stub
+		System.out.print("Enter Custumer userid");
+		int id = scanner.nextInt();
+		
+		System.out.print("Enter Custumer branch");
+		int branchID = scanner.nextInt();
+		
+		System.out.print("Enter Custumer First Name");
+		String firstName= scanner.next();
+		
+		System.out.print("Enter Custumer Last Name");
+		String lastName = scanner.next();
+		
+		System.out.print("Enter Custumer Gender");
+		String gender= scanner.next();
+		
+		System.out.print("Enter Custumer Address");
+		String address= scanner.next();
+		
+		System.out.print("Enter Custumer phone");
+		String phone = scanner.next();
+		
+		System.out.print("Enter Custumer email");
+		String email= scanner.next();
+		
+		System.out.print("Enter Custumer date");
+		String date= scanner.next();
+		
+		
+		//create object for user with all details
+		Customer user = new CustomerImpl();
+		
+		try {
+			customerDAO.createaccout(user);;
+			System.out.println("User registered successfully");
+		}catch(SomeThingWrongException ex) {
+			System.out.println(ex);
+		}
+		
 	}
 
 	

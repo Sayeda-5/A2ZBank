@@ -27,6 +27,14 @@ public interface CustomerDAO{
 
 	public void deleteCustomer(Integer id) throws SomeThingWrongException, NoRecordFoundException;
 
+	public void updateNameOfUser(String name) throws SomeThingWrongException;
+
+	public void deleteUser() throws SomeThingWrongException;
+
+	public void createaccout(Customer user) throws SomeThingWrongException;
+
+	
+
 	
 
 	

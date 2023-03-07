@@ -1,6 +1,7 @@
 package com.masai.UI;
 
 
+import java.sql.Date;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
@@ -13,44 +14,49 @@ import com.masai.exception.NoRecordFoundException;
 import com.masai.exception.SomeThingWrongException;
 
 public class CustomerUI {
-	static CustomerDAO customerDAO;
-	static Scanner scanner;
+	public static CustomerDAO customerDAO = new CustomerDAOImpl();
+	public static Scanner scanner;
 	
 	CustomerUI(Scanner scanner){
-		customerDAO = new CustomerDAOImpl();
 		this.scanner = scanner;
 	}
 	
 	public static void addCustomer() throws NoRecordFoundException{
-		System.out.print("Enter Custumer userid");
+		
+		System.out.println("Enter Custumer userid");
 		int id = scanner.nextInt();
 		
-		System.out.print("Enter Custumer branch");
+		System.out.println("Enter Custumer branch");
 		int branchID = scanner.nextInt();
 		
-		System.out.print("Enter Custumer First Name");
+		System.out.println("Enter Custumer password");
+		String password= scanner.next();
+		
+		
+		System.out.println("Enter Custumer First Name");
 		String firstName= scanner.next();
 		
-		System.out.print("Enter Custumer Last Name");
+		System.out.println("Enter Custumer Last Name");
 		String lastName = scanner.next();
 		
-		System.out.print("Enter Custumer Gender");
+		System.out.println("Enter Custumer Gender");
 		String gender= scanner.next();
 		
-		System.out.print("Enter Custumer Address");
+		System.out.println("Enter Custumer Address");
 		String address= scanner.next();
 		
-		System.out.print("Enter Custumer phone");
+		System.out.println("Enter Custumer phone");
 		String phone = scanner.next();
 		
-		System.out.print("Enter Custumer email");
+		System.out.println("Enter Custumer email");
 		String email= scanner.next();
 		
-		System.out.print("Enter Custumer date");
-		String date= scanner.next();
+//		System.out.println("Enter Custumer date");
+//		Date date= scanner.next();
+	
 		
 		
-		Customer customer = new CustomerImpl();
+		Customer customer = new CustomerImpl(id, branchID, password, firstName, lastName, gender, address, phone, email, new Date(System.currentTimeMillis()));
 		
 		
 		try {
@@ -63,39 +69,40 @@ public class CustomerUI {
 		
 	}
 	public static void updateCustomer() {
-		System.out.print("Enter customer id ");
+		System.out.println("Enter customer id ");
 		int id = scanner.nextInt();
 		
-		System.out.print("Enter customer password ");
-		String password = scanner.next();
 		
-		System.out.print("Enter customer Branch ");
+		System.out.println("Enter customer Branch ");
 		int branchID = scanner.nextInt();
 		
-		System.out.print("Enter customer name ");
+		System.out.println("Enter customer password ");
+		String password = scanner.next();
+		
+		System.out.println("Enter customer name ");
 		String firstName = scanner.next();
 		
-		System.out.print("Enter customer last name ");
+		System.out.println("Enter customer last name ");
 		String lastName = scanner.next();
 		
-		System.out.print("Enter customer gender ");
+		System.out.println("Enter customer gender ");
 		String gender = scanner.next();
 		
-		System.out.print("Enter customer Adress ");
+		System.out.println("Enter customer Adress ");
 		String address = scanner.next();
 		
-		System.out.print("Enter customer Phone number ");
+		System.out.println("Enter customer Phone number ");
 		String phone = scanner.next();
 		
-		System.out.print("Enter customer Email ");
+		System.out.println("Enter customer Email ");
 		String email = scanner.next();
 		
-		System.out.print("Enter customer date ");
-		String date = scanner.next();
+//		System.out.println("Enter customer date ");
+//		String date = scanner.next();
 		
 		
 		//create object for category with category id and name
-		Customer customer = new CustomerImpl(id, branchID,password, firstName, lastName, gender, address, phone, email, date);
+		Customer customer = new CustomerImpl(id, branchID,password, firstName, lastName, gender, address, phone, email, new Date(System.currentTimeMillis()));
 		
 		try {
 			customerDAO.updateCustomer(customer);
@@ -203,6 +210,8 @@ public class CustomerUI {
 
 	public void deleteUser() {
 		// TODO Auto-generated method stub
+		System.out.print("Enter  id ");
+		int id = scanner.nextInt();
 		try {
 			customerDAO.deleteUser();
 			System.out.println("You are Logged out.\nDeleted your account");
@@ -237,9 +246,6 @@ public class CustomerUI {
 		
 		System.out.print("Enter Custumer email");
 		String email= scanner.next();
-		
-		System.out.print("Enter Custumer date");
-		String date= scanner.next();
 		
 		
 		//create object for user with all details

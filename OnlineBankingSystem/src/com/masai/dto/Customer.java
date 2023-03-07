@@ -1,5 +1,7 @@
 package com.masai.dto;
 
+import java.sql.Date;
+
 public interface Customer {
 
 	int getId();
@@ -18,7 +20,7 @@ public interface Customer {
 
 	String getemail();
 
-	String getDate();
+	Date getDate();
 
 	String getPassword();
 
@@ -40,6 +42,8 @@ public interface Customer {
 	void setPhone(String string);
 
 	void setEmail(String string);
+
+	void setDate(String string);
 
 	
 

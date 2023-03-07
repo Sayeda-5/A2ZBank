@@ -1,5 +1,7 @@
 package com.masai.dto;
 
+import java.sql.Date;
+
 //import java.util.Objects;
 
 public class CustomerImpl implements Customer  { 
@@ -13,76 +15,96 @@ public class CustomerImpl implements Customer  {
 	private String Address;
 	private String phone;
 	private String email;
-	private String date;
+	private Date date;
+	
+	
+	
+	
 	
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
+
 	public int getBranchId() {
 		return branchId;
 	}
+
 	public void setBranchId(int branchId) {
 		this.branchId = branchId;
 	}
+
 	public String getPassword() {
 		return password;
 	}
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
 	public String getFirstName() {
 		return FirstName;
 	}
+
 	public void setFirstName(String firstName) {
 		FirstName = firstName;
 	}
+
 	public String getLastName() {
 		return LastName;
 	}
+
 	public void setLastName(String lastName) {
 		LastName = lastName;
 	}
+
 	public String getGender() {
 		return gender;
 	}
+
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
+
 	public String getAddress() {
 		return Address;
 	}
+
 	public void setAddress(String address) {
 		Address = address;
 	}
+
 	public String getPhone() {
 		return phone;
 	}
+
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+
 	public String getEmail() {
 		return email;
 	}
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getDate() {
+
+	public Date getDate() {
 		return date;
 	}
-	public void setDate(String date) {
+
+	public void setDate(Date date) {
 		this.date = date;
 	}
-	
-	
-	
-	
+
 	public CustomerImpl() {}
 	
 	public CustomerImpl(int id, int branchId, String password, String firstName, String lastName, String gender,
-			String address, String phone, String email, String date) {
+			String address, String phone, String email, Date date) {
 		super();
 		this.id = id;
 		this.branchId = branchId;
@@ -120,9 +142,9 @@ public class CustomerImpl implements Customer  {
 	}
 	@Override
 	public String toString() {
-		return "Customer [id=" + id + ", branchId=" + branchId + ", password=" + password + ", FirstName=" + FirstName
-				+ ", LastName=" + LastName + ", gender=" + gender + ", Address=" + Address + ", phone=" + phone
-				+ ", email=" + email + ", date=" + date + "]";
+		return "Customer ID= " + id + "\n Branch Id=" + branchId + "\n password=" + password + "\n FirstName=" + FirstName
+				+ "\n LastName=" + LastName + "\n gender=" + gender + "\n Address=" + Address + "\n phone=" + phone
+				+ "\n email=" + email + "\n date=" + date + "";
 	}
 	
 	
@@ -146,6 +168,11 @@ public class CustomerImpl implements Customer  {
 	public int getBranchID() {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+	@Override
+	public void setDate(String string) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

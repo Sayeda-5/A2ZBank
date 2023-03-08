@@ -31,8 +31,7 @@ ONLINE BANKING SYSTEM
    - User can access his Account only
 
      TABLE SCHEMA
-
-
+     
 | Tables_in_bank     |
 |    :-----:         |   
 | Account            |

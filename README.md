@@ -1,8 +1,9 @@
 ONLINE BANKING SYSTEM
 -----------------------
 
-~ I have developed this API for easy online banking system portal application. It performs fundademtal CURD operation of any banking application.
-~This project is develped by me in the span of 5 days during construct week in Massai School.
+-I have developed this API for easy online banking system portal application. 
+-It performs fundademtal CURD operation of any banking application.
+-This project is develped by me in the span of 5 days during construct week in Massai School.
 
  TECH STACK
  -----------------------

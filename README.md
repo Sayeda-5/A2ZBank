@@ -28,9 +28,9 @@ ONLINE BANKING SYSTEM
 
      TABLE SCHEMA
 
-+--------------------+
+
 | Tables_in_bank     |
-+--------------------+
+|    :-----:         |   
 | Account            |
 | AccountTransaction |
 | Admin              |
@@ -39,9 +39,9 @@ ONLINE BANKING SYSTEM
 +--------------------+
 
        ACCOUNT
-+---------+-------------+
+
 | Field   | Type        | 
-+---------+-------------+
+| :-----: | :--------:  |
 | id      | int         |
 | balance | double(9,1) |
 | cardNo  | varchar(25) | 
@@ -53,9 +53,9 @@ ONLINE BANKING SYSTEM
 +---------+-------------+
 
      AccountTransaction
-+-----------+-------------+
+
 | Field     | Type        |
-+-----------+-------------+
+| :-----:   | :--------:  |
 | id        | int         |
 | accountID | int         |
 | toAccId   | int         |
@@ -67,7 +67,7 @@ ONLINE BANKING SYSTEM
          ADMIN
 
 | Field    | Type        |
-| :-----:  | :--------: |
+| :-----:  | :--------:  |
 | id       | int         | 
 | password | varchar(25) | 
 | userID   | varchar(25) | 
@@ -84,9 +84,9 @@ ONLINE BANKING SYSTEM
 +-------+-------------+
 
          Customer     
-+-----------+-------------+
+
 | Field     | Type        |
-+-----------+-------------+
+| :-----:   | :--------:  |
 | id        | int         |
 | branchID  | int         | 
 | password  | varchar(25) |

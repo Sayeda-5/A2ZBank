@@ -97,4 +97,4 @@ ONLINE BANKING SYSTEM
 | Phone     | varchar(25) | 
 | email     | varchar(45) |
 | date      | date        |
-+-----------+-------------+
+

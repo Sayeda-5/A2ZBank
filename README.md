@@ -6,29 +6,31 @@ ONLINE BANKING SYSTEM
 
  TECH STACK
  -----------------------
- ~ Java
- ~ Spring Boot
- ~ MySQL
+ - Java
+ - Spring Boot
+ - MySQL
  
  
  MODULES
  -----------------------
- ~ Log-in/Log-out
- ~ Admin Module
- ~ Customer  Module
- ~ Account Module
- ~ Transaction Module
+ - Log-in/Log-out
+ - Admin Module
+ - Customer  Module
+ - Account Module
+ - Transaction Module
  
  FEATURES
  -----------------------
- 1 Admin and User authentication,
-  Admin Feature
-  - Administrate the entire application
-  - Admin can access and alter the details of all the users
- 2 User  Feature
-   - Log in themselves 
-   - Viewing trancastions
-   - User can access his Account only
+  Admin and User authentication
+  -----------------
+<>Admin Feature<>
+  - Administrate the entire application.
+  - Admin can access and alter the details of all the users.
+   ------------------------------------------------------
+<>User Feature<>
+  - Log in themselves.
+  - Viewing trancastions.
+  - User can access his Account only.
 
      TABLE SCHEMA
      

@@ -37,7 +37,7 @@ ONLINE BANKING SYSTEM
 | Admin              |
 | Branch             |
 | Customer           |
-+--------------------+
+
 
        ACCOUNT
 
@@ -52,7 +52,7 @@ ONLINE BANKING SYSTEM
 | pin     | int         | 
 | status  | varchar(25) | 
 | type    | varchar(25) | 
-+---------+-------------+
+
 
      AccountTransaction
 
@@ -65,7 +65,7 @@ ONLINE BANKING SYSTEM
 | type      | varchar(25) |
 | amount    | double(9,1) | 
 | date      | date        | 
-+-----------+-------------+
+
 
          ADMIN
 
@@ -75,7 +75,7 @@ ONLINE BANKING SYSTEM
 | id       | int         | 
 | password | varchar(25) | 
 | userID   | varchar(25) | 
-+----------+-------------+
+
 
        BRANCH
 -----------------------

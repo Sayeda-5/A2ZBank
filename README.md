@@ -101,3 +101,5 @@ ONLINE BANKING SYSTEM
 | email     | varchar(45) |
 | date      | date        |
 
+---------------------
+

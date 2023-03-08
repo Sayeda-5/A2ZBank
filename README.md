@@ -30,6 +30,7 @@ ONLINE BANKING SYSTEM
 
 
 | Tables_in_bank     |
+-----------------------
 |    :-----:         |   
 | Account            |
 | AccountTransaction |
@@ -40,7 +41,8 @@ ONLINE BANKING SYSTEM
 
        ACCOUNT
 
-| Field   | Type        | 
+| Field   | Type        |
+-----------------------
 | :-----: | :--------:  |
 | id      | int         |
 | balance | double(9,1) |
@@ -55,6 +57,7 @@ ONLINE BANKING SYSTEM
      AccountTransaction
 
 | Field     | Type        |
+-----------------------
 | :-----:   | :--------:  |
 | id        | int         |
 | accountID | int         |
@@ -67,6 +70,7 @@ ONLINE BANKING SYSTEM
          ADMIN
 
 | Field    | Type        |
+-----------------------
 | :-----:  | :--------:  |
 | id       | int         | 
 | password | varchar(25) | 
@@ -74,14 +78,15 @@ ONLINE BANKING SYSTEM
 +----------+-------------+
 
        BRANCH
-
+-----------------------
 | Field | Type        | 
+-----------------------
 | :----:| :--------:  |
 | id    | int         | 
 | city  | varchar(25) | 
 | name  | varchar(25) |
 | state | varchar(25) |
-+-------+-------------+
+
 
          Customer     
 
